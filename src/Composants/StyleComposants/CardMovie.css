@@ -1,0 +1,20 @@
+.cardmovie {
+  border: 1px solid #f0f0f0;
+  width: 25%;
+  display: inline-block;
+  text-align: center;
+}
+
+figure {
+  background-color: #f0f0f0;
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+.content {
+  padding-bottom: 20px;
+}
+
+.titrecard {
+  margin-top: 20px;
+}
