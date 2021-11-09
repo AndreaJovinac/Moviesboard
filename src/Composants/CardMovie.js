@@ -7,6 +7,7 @@ const CardMovie = (prosp) => {
   const film = prosp;
   const id = film.film.id;
 
+  console.log(prosp + "prosp");
   console.log(film); // On fait un test
   console.log(film.film.id); // On fait un test
 
@@ -14,7 +15,10 @@ const CardMovie = (prosp) => {
     // <Link to={`/movie/${id}`}>
     //<Link to={{ pathname: "/movie/", search: `${id}` }}>
 
-    <Link to={{ pathname: `/movie/${film.film.id}` }}>
+    <Link
+      to={{ pathname: `/movies/${film.film.id}` }}
+      search={`${film.film.id}`}
+    >
       <div className="cardmovie">
         <figure style={{ backgroundImage: "url(" + film.film.poster + ")" }}>
           <img src="" alt="" />

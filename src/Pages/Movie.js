@@ -3,12 +3,15 @@ import axios from "axios";
 import Header from "../Composants/Header";
 import Footer from "../Composants/Footer";
 import CardMovie from "../Composants/CardMovie";
+import Actors from "../Composants/Actors";
 import "../Styles/Movie.css";
 
 const Movie = (prosp) => {
   const [film, setFilm] = useState([]);
   const id = film.id;
+
   console.log(id);
+
   console.log(film);
   //`http://localhost:3000/movies/${id}`
 
@@ -27,19 +30,17 @@ const Movie = (prosp) => {
         <div className="data-movie">
           <div className="movie">
             <h2> {film.title}</h2>
-            <time> date de sortie </time>
-            <p> tag</p>
-            <p> Description </p>
-            <h3> Acteurs </h3>
-            <ul>
-              <li></li>
-            </ul>
-          </div>
-          <aside>
+            <time> {film.release_date} </time>
+            <p id="categories"> {film.categories}</p>
+            <p> {film.description} </p>
             <button className="mediumbtn">+ modifier</button>
             <button className="mediumbtn">x suppr</button>
-            <figure>
-              <img src="" alt="" />
+            <h3> Acteurs </h3>
+            <Actors film={film} key={film.id} />
+          </div>
+          <aside>
+            <figure style={{ backgroundImage: "url(" + film.poster + ")" }}>
+              <img src={film.poster} alt={film.title} />
             </figure>
           </aside>
         </div>
