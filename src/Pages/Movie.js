@@ -5,13 +5,17 @@ import Footer from "../Composants/Footer";
 import CardMovie from "../Composants/CardMovie";
 import "../Styles/Movie.css";
 
-const Movie = (props) => {
+const Movie = (prosp) => {
   const [film, setFilm] = useState([]);
-  const [clickFilm, seClickFilm] = useState([]);
+  const id = film.id;
+  console.log(id);
+  console.log(film);
+  //`http://localhost:3000/movies/${id}`
+
   /* Tu déclares un tableau dans lequel il y a 2 proposité qui seront dynamisé */
   useEffect(() => {
     axios //  La bibliothéque AXIOS : te permet faire gérer l'appel à a demande
-      .get("http://localhost:3000/movies/:id") // On mets l'URL du serveur
+      .get("http://localhost:3000/movies/1") // On mets l'URL du serveur
       .then((response) => setFilm(response.data)); // Tu me récupères la reponse dans lequel il y a toutes les données
   }, []);
   console.log(film); // On teste voir si il y a tous les films concernés
@@ -22,7 +26,7 @@ const Movie = (props) => {
         <button className="mediumbtn"> Retour</button>
         <div className="data-movie">
           <div className="movie">
-            <h2> Titre</h2>
+            <h2> {film.title}</h2>
             <time> date de sortie </time>
             <p> tag</p>
             <p> Description </p>
@@ -32,7 +36,7 @@ const Movie = (props) => {
             </ul>
           </div>
           <aside>
-            <button className="mediumbtn">+ ajouter</button>
+            <button className="mediumbtn">+ modifier</button>
             <button className="mediumbtn">x suppr</button>
             <figure>
               <img src="" alt="" />
@@ -41,7 +45,7 @@ const Movie = (props) => {
         </div>
         <section className="films-similaire">
           <h3> Films similaires</h3>
-          <CardMovie film={film} key={film.id} />
+          <CardMovie film={film} key={film.id} id={film.id} />
         </section>
       </div>
       <Footer />
