@@ -13,8 +13,8 @@ const CardMovie = (props) => {
       </figure>
       <div className="content">
         <h3 className="titrecard"> {film.film.title} </h3>
-        <date> {film.film.release_date}</date>
-        <p> {film.film.categories}</p>
+        <time> {film.film.release_date}</time>
+        <p id="categories"> {film.film.categories}</p>
         <p> {film.film.description} </p>
         <button> + Add</button>
         <button> - Suppr</button>
