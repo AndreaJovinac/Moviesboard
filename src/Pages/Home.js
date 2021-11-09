@@ -38,7 +38,10 @@ const Home = () => {
                 min="2021-11-01"
                 max="2021-11-01"
               />
-              <button type="submit"> Valider </button>
+              <button className="largebtn" type="submit">
+                {" "}
+                Valider{" "}
+              </button>
             </form>
           </div>
         </div>

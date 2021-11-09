@@ -31,3 +31,38 @@ h5 {
 h6 {
   font-size: 14px;
 }
+
+a {
+  color: black;
+}
+
+.largebtn {
+  background-color: #e50914;
+  border-radius: 30px;
+  color: white;
+  font-size: 16px;
+  padding: 6px 20px 6px 20px;
+  font-weight: 600;
+  display: inline-block;
+  border: 0;
+}
+
+.mediumbtn {
+  height: 20px;
+  font-size: 12px;
+  border-radius: 30px;
+  color: white;
+  font-size: 14px;
+  padding-bottom: 22px;
+
+  background-color: #e50914;
+  font-weight: 600;
+  display: inline-block;
+  border: 0;
+  margin: 10px 6px 10px 6px;
+}
+
+button:hover {
+  background-color: #bf0912;
+  margin: 10px 6px 10px 6px;
+}

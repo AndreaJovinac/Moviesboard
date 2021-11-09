@@ -77,17 +77,6 @@ select {
   width: 300px;
 }
 
-button {
-  background-color: #e50914;
-  border-radius: 30px;
-  color: white;
-  font-size: 16px;
-  padding: 6px 20px 6px 20px;
-  font-weight: 600;
-  display: inline-block;
-  border: 0;
-}
-
 .text-content {
   margin-bottom: 20px;
 }
