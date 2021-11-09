@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../Composants/Header";
 import Footer from "../Composants/Footer";
+import axios from "axios";
 import "../Styles/Home.css";
-import DatePicker from "react-datepicker";
 import CardMovie from "../Composants/CardMovie";
 
-function Home() {
+const Home = () => {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    axios
+      .get("http://localhost:3000/movies")
+      .then((response) => setData(response.data));
+  }, []);
+  console.log(data);
+
   return (
     <div className="home">
       <Header />
@@ -20,7 +28,15 @@ function Home() {
                 <option value="drame">Drame</option>
               </select>
               <input placeholder="Tapez votre mot de recherche"></input>
-              <DatePicker />
+              {/* <DatePicker /> */}
+              <input
+                type="date"
+                id="start"
+                name="trip-start"
+                value="2018-07-22"
+                min="2018-01-01"
+                max="2018-12-31"
+              />
               <button type="submit"> Valider </button>
             </form>
           </div>
@@ -38,6 +54,6 @@ function Home() {
       <Footer />
     </div>
   );
-}
+};
 
 export default Home;
