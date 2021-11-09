@@ -40,8 +40,8 @@ a {
   background-color: #e50914;
   border-radius: 30px;
   color: white;
-  font-size: 16px;
-  padding: 6px 20px 6px 20px;
+  font-size: 18px;
+  padding: 7px 20px 7px 20px;
   font-weight: 600;
   display: inline-block;
   border: 0;
@@ -62,7 +62,7 @@ a {
   margin: 10px 6px 10px 6px;
 }
 
-button:hover {
+.mediumbtn:hover {
   background-color: #bf0912;
   margin: 10px 6px 10px 6px;
 }
