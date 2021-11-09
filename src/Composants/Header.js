@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./StyleComposants/Header.css";
 
 function Header() {
@@ -7,15 +7,17 @@ function Header() {
     <div className="header">
       <div className="content-header">
         <div className="logo">
-          <p>MOVIES BOARD</p>
+          <Link exact to="/">
+            <p>MOVIES BOARD</p>
+          </Link>
         </div>
         <nav className="nav">
-          <NavLink exact to="/search">
+          <Link exact to="/search">
             <li className="new"> + Ajouter un film </li>
-          </NavLink>
-          <NavLink exact to="/favorite">
+          </Link>
+          <Link exact to="/favorite">
             <li className="search"> Rechercher </li>
-          </NavLink>
+          </Link>
         </nav>
       </div>
     </div>

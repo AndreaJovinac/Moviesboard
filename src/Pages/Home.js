@@ -7,6 +7,8 @@ import CardMovie from "../Composants/CardMovie";
 
 const Home = () => {
   const [film, setFilm] = useState([]);
+
+  const id = "";
   /* Tu déclares un tableau dans lequel il y a 2 proposité qui seront dynamisé */
   useEffect(() => {
     axios //  La bibliothéque AXIOS : te permet faire gérer l'appel à a demande
@@ -53,7 +55,7 @@ const Home = () => {
             <p>Il y a 5 résultats</p>
           </div>
 
-          {film.map((film) => (
+          {film.map((film, id) => (
             <CardMovie film={film} key={film.id} />
             /* Pour pouvoir sélectionner tous les films il faut faire un map et récuréer */
           ))}

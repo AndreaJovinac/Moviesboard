@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 const CardMovie = (props) => {
   //* Tu récupéres les donnés du parent */
   const film = props;
+  const id = props;
 
   console.log(film); // On fait un test
 
