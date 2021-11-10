@@ -7,7 +7,7 @@ import Actors from "../Composants/Actors";
 import "../Styles/Movie.css";
 import { useParams } from "react-router";
 
-const Movie = (prosp) => {
+const Movie = () => {
   const [film, setFilm] = useState([]);
   const { id } = useParams(); // une fonction qui récupére les paramètres de l'URL
   //const id = film[0].id;
@@ -41,19 +41,7 @@ const Movie = (prosp) => {
             <p> {film.description} </p>
             <section className="section-actor">
               <h3> Acteurs </h3>
-
-              <div className="actor">
-                <figure
-                  id="img-actor"
-                  style={{ backgroundImage: "url(" + film.poster + ")" }}
-                >
-                  <img src="" alt="" />
-                </figure>
-                <div className="content">
-                  <h3 className="titrecard">NOM Prénom </h3>
-                  <p>Personnages</p>
-                </div>
-              </div>
+              <Actors film={film} key={film.id} />
             </section>
           </div>
           <aside>

@@ -23,6 +23,7 @@ const Home = () => {
       <section className="section">
         <div className="overlay">
           <div className="content-section">
+            <h1> Bienvenue sur l'application Movies Board</h1>
             <form>
               <select id="catagorie" name="categorie">
                 <option value="action">Action</option>

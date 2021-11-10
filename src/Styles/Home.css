@@ -4,6 +4,11 @@
   background-image: url(../Images/netflix-image.jpeg);
   background-size: cover;
 }
+
+.section h1 {
+  color: white;
+}
+
 .overlay {
   background: linear-gradient(transparent, #000);
   width: 100%;

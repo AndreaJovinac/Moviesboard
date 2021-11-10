@@ -12,11 +12,8 @@ function Header() {
           </Link>
         </div>
         <nav className="nav">
-          <Link exact to="/search">
+          <Link exact to="/new">
             <li className="new"> + Ajouter un film </li>
-          </Link>
-          <Link exact to="/favorite">
-            <li className="search"> Rechercher </li>
           </Link>
         </nav>
       </div>
