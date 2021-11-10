@@ -15,8 +15,17 @@ const New = () => {
             <h1>Ajouter une page</h1>
 
             <form>
-              <label for="">Titre du film</label>
-              <input type="" name="" value="" />
+              <label for="titre">Titre du film</label>
+              <input type="text" name="titre" value="Tapez le nom du film" />
+              <label for="">Date de publication</label>
+              <input
+                type="date"
+                id="start"
+                name="trip-start"
+                value="2018-07-22"
+                min="2021-11-01"
+                max="2021-11-01"
+              />
             </form>
           </div>
         </div>

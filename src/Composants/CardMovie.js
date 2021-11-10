@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../Composants/StyleComposants/CardMovie.css";
 import { Link } from "react-router-dom";
+import Date from "../Services/Date";
 
 const CardMovie = (prosp) => {
   //* Tu récupéres les donnés du parent */
@@ -26,7 +27,7 @@ const CardMovie = (prosp) => {
         </figure>
         <div className="content">
           <h3 className="titrecard"> {film.film.title} </h3>
-          <time> {film.film.release_date}</time>
+          <time> {Date.DateForm(film.film.release_date)}</time>
           <p id="categories">{film.film.categories}</p>
           <p> {film.film.description} </p>
           <button className="mediumbtn"> + Add</button>

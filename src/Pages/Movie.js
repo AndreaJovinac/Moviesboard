@@ -6,6 +6,7 @@ import CardMovie from "../Composants/CardMovie";
 import Actors from "../Composants/Actors";
 import "../Styles/Movie.css";
 import { useParams } from "react-router";
+import Date from "../Services/Date";
 
 const Movie = () => {
   const [film, setFilm] = useState([]);
@@ -36,7 +37,7 @@ const Movie = () => {
         <div className="data-movie">
           <div className="movie">
             <h2> {film.title}</h2>
-            <time> {film.release_date} </time>
+            <time> {Date.DateForm(film.release_date)} </time>
             <p id="categories"> {film.categories}</p>
             <p> {film.description} </p>
             <section className="section-actor">
