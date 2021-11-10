@@ -5,10 +5,11 @@ import Footer from "../Composants/Footer";
 import CardMovie from "../Composants/CardMovie";
 import Actors from "../Composants/Actors";
 import "../Styles/Movie.css";
+import { useParams } from "react-router";
 
 const Movie = (prosp) => {
   const [film, setFilm] = useState([]);
-  const id = "1";
+  const { id } = useParams(); // une fonction qui récupére les paramètres de l'URL
   //const id = film[0].id;
   /* Tu déclares un tableau dans lequel il y a 2 proposité qui seront dynamisé */
   useEffect(() => {
@@ -18,7 +19,7 @@ const Movie = (prosp) => {
   }, []);
   console.log(film); // On teste voir si il y a tous les films concernés
   //console.log(id);
-
+  console.log(film.actors);
   return (
     <div className="movie">
       <Header />
@@ -40,6 +41,7 @@ const Movie = (prosp) => {
             <p> {film.description} </p>
             <section className="section-actor">
               <h3> Acteurs </h3>
+
               <div className="actor">
                 <figure
                   id="img-actor"
