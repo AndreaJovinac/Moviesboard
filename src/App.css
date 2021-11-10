@@ -60,10 +60,10 @@ a {
   font-weight: 600;
   display: inline-block;
   border: 0;
-  margin: 10px 6px 10px 6px;
+  /* margin: 10px 6px 10px 6px; */
 }
 
 .mediumbtn:hover {
   background-color: #bf0912;
-  margin: 10px 6px 10px 6px;
+  /* margin: 10px 6px 10px 6px; */
 }

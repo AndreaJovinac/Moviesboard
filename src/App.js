@@ -15,7 +15,7 @@ function App(prosp) {
       <BrowserRouter>
         <Routes>
           <Route index element={<Home />} />
-          <Route path="/Movie" search={`${id}`} element={<Movie />} />
+          <Route path="/movies/:id" element={<Movie />} />
           <Route path="/New" element={<New />} />
           <Route path="/Edit" element={<Edit />} />
         </Routes>

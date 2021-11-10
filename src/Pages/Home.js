@@ -8,15 +8,15 @@ import CardMovie from "../Composants/CardMovie";
 const Home = () => {
   const [film, setFilm] = useState([]);
 
-  const id = "";
+  const id = film[0];
   /* Tu déclares un tableau dans lequel il y a 2 proposité qui seront dynamisé */
   useEffect(() => {
     axios //  La bibliothéque AXIOS : te permet faire gérer l'appel à a demande
       .get("http://localhost:3000/movies") // On mets l'URL du serveur
       .then((response) => setFilm(response.data)); // Tu me récupères la reponse dans lequel il y a toutes les données
   }, []);
-  console.log(film); // On teste voir si il y a tous les films concernés
-
+  console.log(film[0]); // On teste voir si il y a tous les films concernés
+  console.log(id);
   return (
     <div className="home">
       <Header />
@@ -56,7 +56,7 @@ const Home = () => {
           </div>
 
           {film.map((film, id) => (
-            <CardMovie film={film} key={film.id} />
+            <CardMovie film={film} key={film.id} id={film.id} />
             /* Pour pouvoir sélectionner tous les films il faut faire un map et récuréer */
           ))}
         </div>

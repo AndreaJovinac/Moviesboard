@@ -15,10 +15,11 @@ const CardMovie = (prosp) => {
     // <Link to={`/movie/${id}`}>
     //<Link to={{ pathname: "/movie/", search: `${id}` }}>
 
-    <Link
-      to={{ pathname: `/movies/${film.film.id}` }}
-      search={`${film.film.id}`}
-    >
+    // <Link
+    //   to={{ pathname: `/movies/${film.film.id}` }}
+    //   search={`${film.film.id}`}
+    // >
+    <Link to={`/movies/${film.film.id}`}>
       <div className="cardmovie">
         <figure style={{ backgroundImage: "url(" + film.film.poster + ")" }}>
           <img src="" alt="" />
