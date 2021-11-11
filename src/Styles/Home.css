@@ -30,7 +30,7 @@
   margin: auto;
 }
 
-form {
+.form-hom {
   background-color: #fff;
   height: 40px;
   border-radius: 50px;
@@ -38,12 +38,12 @@ form {
   align-items: center;
 }
 
-input[type="text"] {
+input[type="submit"] {
   background-color: red;
   width: 100%;
 }
 
-form > input {
+.form-hom > input {
   border-radius: 30px;
   border: none;
   height: 30px;

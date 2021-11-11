@@ -24,7 +24,7 @@ const Home = () => {
         <div className="overlay">
           <div className="content-section">
             <h1> Bienvenue sur l'application Movies Board</h1>
-            <form>
+            <form className="form-hom">
               <select id="catagorie" name="categorie">
                 <option value="action">Action</option>
                 <option value="animation">Animation</option>

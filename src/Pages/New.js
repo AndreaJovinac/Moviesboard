@@ -2,30 +2,34 @@ import React, { useState, useEffect } from "react";
 import Header from "../Composants/Header";
 import Footer from "../Composants/Footer";
 import axios from "axios";
-import "../Styles/Home.css";
+import "../Styles/New.css";
 import CardMovie from "../Composants/CardMovie";
 
 const New = () => {
   return (
     <div className="new-section">
       <Header />
+
       <section classNamem="">
         <div className="content-section-2">
+          <section className="nav-buttn">
+            <button className="mediumbtn"> Retour</button>
+          </section>
           <div className="text-content">
-            <h1>Ajouter une page</h1>
-
-            <form>
+            <h1>Ajouter un film</h1>
+            <form className="form-new">
               <label for="titre">Titre du film</label>
-              <input type="text" name="titre" value="Tapez le nom du film" />
-              <label for="">Date de publication</label>
               <input
-                type="date"
-                id="start"
-                name="trip-start"
-                value="2018-07-22"
-                min="2021-11-01"
-                max="2021-11-01"
+                type="text"
+                name="titre"
+                placeholder="Tapez le nom du film"
               />
+              <label for="">Date de publication</label>
+              <input type="date" />
+              <button className="largebtn" type="submit">
+                {" "}
+                Envoyer
+              </button>
             </form>
           </div>
         </div>
