@@ -40,6 +40,9 @@ const New = () => {
                 {" "}
                 + Ajouter le film
               </button>
+              <h3> Plus de saisies</h3>
+              <label for="">Description</label>
+              <textarea type="text" />
             </form>
           </div>
         </div>
