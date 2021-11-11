@@ -29,7 +29,7 @@ const CardMovie = (prosp) => {
       </Link>
       <div className="content">
         <h3 className="titrecard"> {film.film.title} </h3>
-        <time> {Date.DateForm(film.film.release_date)}</time>
+        <time> Date de sortie : {Date.DateForm(film.film.release_date)}</time>
         <p id="categories">
           {film.film.categories && film.film.categories.join(", ")}
         </p>

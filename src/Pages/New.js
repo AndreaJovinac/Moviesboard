@@ -3,7 +3,8 @@ import Header from "../Composants/Header";
 import Footer from "../Composants/Footer";
 import axios from "axios";
 import "../Styles/New.css";
-import CardMovie from "../Composants/CardMovie";
+import { Link } from "react-router-dom";
+import { IoIosArrowBack } from "react-icons/io";
 
 const New = () => {
   return (
@@ -13,10 +14,19 @@ const New = () => {
       <section classNamem="">
         <div className="content-section-2">
           <section className="nav-buttn">
-            <button className="mediumbtn"> Retour</button>
+            <Link exact to="/">
+              <button className="mediumbtn">
+                {" "}
+                <IoIosArrowBack /> Retour
+              </button>
+            </Link>
           </section>
           <div className="text-content">
             <h1>Ajouter un film</h1>
+            <p>
+              Vous pouvez ajouter un nouveau à votre bibliothèque Movies Board
+              en remplissant le formulaire ci-dessous.{" "}
+            </p>
             <form className="form-new">
               <label for="titre">Titre du film</label>
               <input
@@ -24,11 +34,11 @@ const New = () => {
                 name="titre"
                 placeholder="Tapez le nom du film"
               />
-              <label for="">Date de publication</label>
+              <label for="">Date de sortie</label>
               <input type="date" />
-              <button className="largebtn" type="submit">
+              <button id="submit-add" className="largebtn" type="submit">
                 {" "}
-                Envoyer
+                + Ajouter le film
               </button>
             </form>
           </div>
