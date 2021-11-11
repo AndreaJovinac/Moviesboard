@@ -57,10 +57,11 @@ const Home = () => {
             <p>Il y a 5 résultats</p>
           </div>
 
-          {film.map((film, id) => (
-            <CardMovie film={film} key={film.id} id={film.id} />
-            /* Pour pouvoir sélectionner tous les films il faut faire un map et récuréer */
-          ))}
+          {film &&
+            film.map((film, id) => (
+              <CardMovie film={film} key={film.id} id={film.id} />
+              /* Pour pouvoir sélectionner tous les films il faut faire un map et récuréer */
+            ))}
         </div>
       </section>
       <Footer />

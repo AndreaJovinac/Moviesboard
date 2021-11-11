@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../Composants/StyleComposants/CardMovie.css";
 import { Link } from "react-router-dom";
 import Date from "../Services/Date";
-import { IoIosTrash } from "react-icons/io";
+import { IoIosTrash, IoMdCreate } from "react-icons/io";
 
 const CardMovie = (prosp) => {
   //* Tu récupéres les donnés du parent */
@@ -34,7 +34,10 @@ const CardMovie = (prosp) => {
           {film.film.categories && film.film.categories.join(", ")}
         </p>
         <p id=""> {film.film.description} </p>
-        <button className="mediumbtn"> + Add</button>
+        <button className="mediumbtn">
+          {" "}
+          <IoMdCreate /> Add
+        </button>
         <button className="mediumbtn">
           {" "}
           <IoIosTrash />

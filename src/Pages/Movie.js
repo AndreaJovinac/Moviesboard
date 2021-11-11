@@ -6,8 +6,7 @@ import CardMovie from "../Composants/CardMovie";
 import "../Styles/Movie.css";
 import { useParams } from "react-router";
 import Date from "../Services/Date";
-import { IoIosTrash } from "react-icons/io";
-import { VscEdit } from "react-icons/io";
+import { IoIosTrash, IoMdCreate } from "react-icons/io";
 
 const Movie = () => {
   const [film, setFilm] = useState([]);
@@ -35,11 +34,10 @@ const Movie = () => {
           <button className="mediumbtn"> Retour</button>
           <div className="btns">
             <button id="edit" className="mediumbtn">
-              {/* <VscEdit /> */}
-              modifier
+              <IoMdCreate /> modifier
             </button>
             <button className="mediumbtn">
-              <IoIosTrash /> suppr
+              <IoIosTrash /> Supprimer
             </button>
           </div>
         </section>
@@ -88,12 +86,10 @@ const Movie = () => {
                 </figure>
                 <div className="content">
                   <h5 className="titrecard"> {title} </h5>
-                  <time> Sorti le : {Date.DateForm(release_date)}</time>
+                  <time> Date de sortie : {Date.DateForm(release_date)}</time>
                 </div>
               </div>
             ))}
-
-          {/* <CardMovie film={film} key={film.id} id={film.id} /> */}
         </section>
       </div>
       <Footer />
