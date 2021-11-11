@@ -6,6 +6,8 @@ import CardMovie from "../Composants/CardMovie";
 import "../Styles/Movie.css";
 import { useParams } from "react-router";
 import Date from "../Services/Date";
+import { IoIosTrash } from "react-icons/io";
+import { VscEdit } from "react-icons/io";
 
 const Movie = () => {
   const [film, setFilm] = useState([]);
@@ -33,9 +35,12 @@ const Movie = () => {
           <button className="mediumbtn"> Retour</button>
           <div className="btns">
             <button id="edit" className="mediumbtn">
-              + modifier
+              {/* <VscEdit /> */}
+              modifier
             </button>
-            <button className="mediumbtn">x suppr</button>
+            <button className="mediumbtn">
+              <IoIosTrash /> suppr
+            </button>
           </div>
         </section>
         <div className="data-movie">
