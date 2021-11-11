@@ -1,0 +1,38 @@
+.content-movie {
+  margin-top: 20px;
+  width: 1200px;
+  margin: auto;
+}
+
+.data-movie {
+  margin-top: 30px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 3fr 1fr;
+}
+
+.films-similaire {
+  margin-bottom: 30px;
+}
+
+section > h3 {
+  margin-bottom: 20px;
+}
+
+.btns {
+  display: inline-block;
+}
+
+.nav-buttn {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+#edit {
+  margin-right: 10px;
+}
+
+.section-actor {
+  margin-top: 30px;
+}
