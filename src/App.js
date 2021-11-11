@@ -7,10 +7,7 @@ import New from "./Pages/New";
 import Edit from "./Pages/Edit";
 import Error from "./Pages/Error";
 
-function App(prosp) {
-  const film = prosp;
-  const id = film.id;
-  console.log(id);
+function App() {
   return (
     <div className="App">
       <BrowserRouter>
