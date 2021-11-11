@@ -3,12 +3,13 @@ import Header from "../Composants/Header";
 import Footer from "../Composants/Footer";
 import axios from "axios";
 import "../Styles/Home.css";
+import { useParams } from "react-router";
 import CardMovie from "../Composants/CardMovie";
 
 const Home = () => {
   const [film, setFilm] = useState([]);
 
-  const id = film[0];
+  const id = film[0].id;
   /* Tu déclares un tableau dans lequel il y a 2 proposité qui seront dynamisé */
   useEffect(() => {
     axios //  La bibliothéque AXIOS : te permet faire gérer l'appel à a demande

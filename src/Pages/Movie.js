@@ -3,7 +3,6 @@ import axios from "axios";
 import Header from "../Composants/Header";
 import Footer from "../Composants/Footer";
 import CardMovie from "../Composants/CardMovie";
-import Actors from "../Composants/Actors";
 import "../Styles/Movie.css";
 import { useParams } from "react-router";
 import Date from "../Services/Date";
@@ -21,6 +20,11 @@ const Movie = () => {
   console.log(film); // On teste voir si il y a tous les films concernés
   //console.log(id);
   console.log(film.actors);
+  const actors = film.actors;
+  console.log(actors);
+  const similar = film.similar_movies;
+
+  console.log(similar);
   return (
     <div className="movie">
       <Header />
@@ -38,11 +42,26 @@ const Movie = () => {
           <div className="movie">
             <h2> {film.title}</h2>
             <time> {Date.DateForm(film.release_date)} </time>
-            <p id="categories"> {film.categories}</p>
+            <p id="categories">
+              {" "}
+              {film.categories && film.categories.join(", ")}
+            </p>
             <p> {film.description} </p>
-            <section className="section-actor">
+            <section className="actors">
               <h3> Acteurs </h3>
-              <Actors film={film} key={film.id} />
+              <section className="section-actor">
+                {/* Il faut faire un map pour pouvoir récupérer toutes les acteurs du film */}
+                {film.actors &&
+                  film.actors.map(({ character, name, photo }, index) => (
+                    <div className="actor">
+                      <img className="img-actor" src={photo} alt={name} />
+                      <div className="content-actors">
+                        <h5 className="titrecard">{name} </h5>
+                        <p>{character}</p>
+                      </div>
+                    </div>
+                  ))}
+              </section>
             </section>
           </div>
           <aside>
@@ -53,7 +72,24 @@ const Movie = () => {
         </div>
         <section className="films-similaire">
           <h3> Films similaires</h3>
-          <CardMovie film={film} key={film.id} id={film.id} />
+          <p> etst</p>
+          {/* Il faut faire un map pour pouvoir récupérer toutes les acteurs du film */}
+          {film.similar &&
+            film.similar.map(({ title, poster, release_date }) => (
+              <div className="cardmovie">
+                <figure>
+                  <img src={poster} alt={title} />
+                </figure>
+                <div className="content">
+                  <h3 className="titrecard"> {title} </h3>
+                  <time> {Date.DateForm(release_date)}</time>
+                  <button className="mediumbtn"> + Add</button>
+                  <button className="mediumbtn"> x Suppr</button>
+                </div>
+              </div>
+            ))}
+
+          {/* <CardMovie film={film} key={film.id} id={film.id} /> */}
         </section>
       </div>
       <Footer />
