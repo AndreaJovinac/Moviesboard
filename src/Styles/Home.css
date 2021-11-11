@@ -7,6 +7,10 @@
 
 .section h1 {
   color: white;
+  text-align: left;
+  font-size: 30px;
+  /* text-shadow: #e50914 1px 1px 8px; */
+  margin-bottom: 10px;
 }
 
 .overlay {
@@ -35,11 +39,12 @@
   height: 40px;
   border-radius: 50px;
   display: flex;
+  gap: 20px;
   align-items: center;
 }
 
 input[type="submit"] {
-  background-color: red;
+  background-color: #e50914;
   width: 100%;
 }
 
@@ -53,7 +58,7 @@ input[type="submit"] {
 }
 
 select {
-  border: 2px solid #f0f0f0;
+  border: none;
   border-radius: 30px;
   padding: 6px;
   width: 300px;

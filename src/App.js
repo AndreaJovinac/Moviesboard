@@ -20,7 +20,7 @@ function App(prosp) {
           <Route path="/New" element={<New />} />
           <Route path="/Edit" element={<Edit />} />
           <Route path="*" element={<Error />} />
-          <Route path="/movies/:*" element={<Error />} />
+          <Route component={<Error />} />
         </Routes>
       </BrowserRouter>
     </div>

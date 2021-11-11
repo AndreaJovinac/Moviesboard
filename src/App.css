@@ -54,6 +54,9 @@ time {
   display: inline-block;
   border: 0;
 }
+.largebtn:hover {
+  background-color: #bf0912;
+}
 
 .mediumbtn {
   height: 20px;

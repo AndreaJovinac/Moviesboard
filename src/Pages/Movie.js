@@ -6,7 +6,8 @@ import CardMovie from "../Composants/CardMovie";
 import "../Styles/Movie.css";
 import { useParams } from "react-router";
 import Date from "../Services/Date";
-import { IoIosTrash, IoMdCreate } from "react-icons/io";
+import { IoIosTrash, IoMdCreate, IoIosArrowBack } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const Movie = () => {
   const [film, setFilm] = useState([]);
@@ -31,7 +32,12 @@ const Movie = () => {
       <Header />
       <div className="content-movie">
         <section className="nav-buttn">
-          <button className="mediumbtn"> Retour</button>
+          <Link exact to="/">
+            <button className="mediumbtn">
+              {" "}
+              <IoIosArrowBack /> Retour
+            </button>
+          </Link>
           <div className="btns">
             <button id="edit" className="mediumbtn">
               <IoMdCreate /> modifier

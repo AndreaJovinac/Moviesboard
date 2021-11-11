@@ -5,7 +5,9 @@
   text-align: center;
   border-radius: 3px;
 }
-
+#edit-btn {
+  margin-right: 10px;
+}
 figure {
   background-color: #f0f0f0;
   height: 400px;

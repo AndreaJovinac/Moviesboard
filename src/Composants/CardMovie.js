@@ -34,14 +34,14 @@ const CardMovie = (prosp) => {
           {film.film.categories && film.film.categories.join(", ")}
         </p>
         <p id=""> {film.film.description} </p>
-        <button className="mediumbtn">
+        <button id="edit-btn" className="mediumbtn">
           {" "}
-          <IoMdCreate /> Add
+          <IoMdCreate /> Modifier
         </button>
         <button className="mediumbtn">
           {" "}
           <IoIosTrash />
-          Suppr
+          Supprimer
         </button>
       </div>
     </div>

@@ -24,7 +24,7 @@ const Home = () => {
       <section className="section">
         <div className="overlay">
           <div className="content-section">
-            <h1> Bienvenue sur l'application Movies Board</h1>
+            <h1> Rechercher votre film</h1>
             <form className="form-hom">
               <select id="catagorie" name="categorie">
                 <option value="action">Action</option>
@@ -44,7 +44,7 @@ const Home = () => {
               />
               <button className="largebtn" type="submit">
                 {" "}
-                Valider{" "}
+                Rechercher{" "}
               </button>
             </form>
           </div>
@@ -53,8 +53,8 @@ const Home = () => {
       <section classNamem="">
         <div className="content-section-2">
           <div className="text-content">
-            <h1> Résultat de votre recherche</h1>
-            <p>Il y a 5 résultats</p>
+            <h1> Bibliothèque de vos films</h1>
+            <p>Vous avez actuellement : ... films dans votre bibliothèque</p>
           </div>
 
           {film &&
