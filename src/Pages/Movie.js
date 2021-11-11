@@ -41,9 +41,8 @@ const Movie = () => {
         <div className="data-movie">
           <div className="movie">
             <h2> {film.title}</h2>
-            <time> {Date.DateForm(film.release_date)} </time>
+            <time> Date de sortie : {Date.DateForm(film.release_date)} </time>
             <p id="categories">
-              {" "}
               {film.categories && film.categories.join(", ")}
             </p>
             <p> {film.description} </p>
@@ -72,19 +71,19 @@ const Movie = () => {
         </div>
         <section className="films-similaire">
           <h3> Films similaires</h3>
-          <p> etst</p>
           {/* Il faut faire un map pour pouvoir récupérer toutes les acteurs du film */}
-          {film.similar &&
-            film.similar.map(({ title, poster, release_date }) => (
+          {similar &&
+            similar.map(({ title, poster, release_date, index }) => (
               <div className="cardmovie">
-                <figure>
-                  <img src={poster} alt={title} />
+                <figure
+                  className="poster-similar"
+                  style={{ backgroundImage: "url(" + poster + ")" }}
+                >
+                  <img src="" alt="" />
                 </figure>
                 <div className="content">
-                  <h3 className="titrecard"> {title} </h3>
-                  <time> {Date.DateForm(release_date)}</time>
-                  <button className="mediumbtn"> + Add</button>
-                  <button className="mediumbtn"> x Suppr</button>
+                  <h5 className="titrecard"> {title} </h5>
+                  <time> Sorti le : {Date.DateForm(release_date)}</time>
                 </div>
               </div>
             ))}

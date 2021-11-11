@@ -9,7 +9,7 @@ import CardMovie from "../Composants/CardMovie";
 const Home = () => {
   const [film, setFilm] = useState([]);
 
-  const id = film[0].id;
+  const id = film.id;
   /* Tu déclares un tableau dans lequel il y a 2 proposité qui seront dynamisé */
   useEffect(() => {
     axios //  La bibliothéque AXIOS : te permet faire gérer l'appel à a demande

@@ -20,21 +20,23 @@ const CardMovie = (prosp) => {
     //   to={{ pathname: `/movies/${film.film.id}` }}
     //   search={`${film.film.id}`}
     // >
-    <Link to={`/movies/${film.film.id}`}>
-      <div className="cardmovie">
+    <div className="cardmovie">
+      <Link to={`/movies/${film.film.id}`}>
         <figure style={{ backgroundImage: "url(" + film.film.poster + ")" }}>
           <img src="" alt="" />
         </figure>
-        <div className="content">
-          <h3 className="titrecard"> {film.film.title} </h3>
-          <time> {Date.DateForm(film.film.release_date)}</time>
-          <p id="categories">{film.film.categories}</p>
-          <p> {film.film.description} </p>
-          <button className="mediumbtn"> + Add</button>
-          <button className="mediumbtn"> x Suppr</button>
-        </div>
+      </Link>
+      <div className="content">
+        <h3 className="titrecard"> {film.film.title} </h3>
+        <time> {Date.DateForm(film.film.release_date)}</time>
+        <p id="categories">
+          {film.film.categories && film.film.categories.join(", ")}
+        </p>
+        <p id=""> {film.film.description} </p>
+        <button className="mediumbtn"> + Add</button>
+        <button className="mediumbtn"> x Suppr</button>
       </div>
-    </Link>
+    </div>
   );
 };
 

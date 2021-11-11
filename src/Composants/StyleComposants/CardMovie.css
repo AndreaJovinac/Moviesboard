@@ -14,7 +14,11 @@ figure {
 }
 
 .content {
+  padding: 12px;
+}
+.content p {
   padding: 10px;
+  margin-bottom: 10px;
 }
 
 #categories {

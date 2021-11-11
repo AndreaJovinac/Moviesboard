@@ -37,6 +37,13 @@ a {
   text-decoration: none;
 }
 
+time {
+  font-size: 16px;
+  line-height: 12px;
+  font-weight: 400;
+  color: #797979;
+}
+
 .largebtn {
   background-color: #e50914;
   border-radius: 30px;
