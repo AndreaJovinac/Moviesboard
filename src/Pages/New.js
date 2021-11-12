@@ -41,13 +41,14 @@ const New = () => {
                 Titre du film
               </label>
               <input
+                className="input-form"
                 type="text"
                 name="titre"
                 placeholder="Tapez le nom du film"
                 required
               />
               <label for="">Date de sortie</label>
-              <input type="date" />
+              <input type="date" className="input-form" />
               <div className="section-submit">
                 <button id="submit-add" className="largebtn" type="submit">
                   + Ajouter le film
@@ -60,15 +61,17 @@ const New = () => {
                 Catégories
               </label>
               <input
+                className="input-form"
                 type="text"
                 name="titre"
                 placeholder="Ajouter vos catégories"
                 required
               />
               <label for="">Synopsis</label>
-              <textarea type="text" />
+              <textarea className="input-form" type="text" rows="8" />
               <label for="url">Lien la couverture du film</label>
               <input
+                className="input-form"
                 type="url"
                 name="url"
                 id="url"

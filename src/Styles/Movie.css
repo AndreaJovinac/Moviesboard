@@ -7,7 +7,7 @@
 .data-movie {
   margin-top: 30px;
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 30px;
   grid-template-columns: 3fr 1fr;
 }
 
@@ -76,4 +76,40 @@ section > h3 {
   height: 200px;
   background-size: cover;
   background-position: top;
+}
+.content-similar-movie {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 1200px) {
+  .data-movie {
+    grid-template-columns: 1fr;
+    padding-left: 20px;
+    margin-right: 20px;
+  }
+  .content-movie {
+    width: 100%;
+  }
+  .nav-buttn {
+    padding-left: 20px;
+    margin-right: 20px;
+  }
+  .films-similaire {
+    padding-left: 20px;
+    margin-right: 20px;
+  }
+  #figure {
+    height: 400px !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .figure-movie {
+    height: 400px !important;
+  }
+  .content-similar-movie {
+    grid-template-columns: 1fr;
+  }
 }

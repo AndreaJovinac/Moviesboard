@@ -75,29 +75,30 @@ const Movie = () => {
             </section>
           </div>
           <aside>
-            <figure>
+            <div>
               <img src={film.poster} alt={film.title} />
-            </figure>
+            </div>
           </aside>
         </div>
         <section className="films-similaire">
           <h3> Films similaires</h3>
           {/* Il faut faire un map pour pouvoir récupérer toutes les acteurs du film */}
-          {similar &&
-            similar.map(({ title, poster, release_date, index }) => (
-              <div className="cardmovie">
-                <figure
-                  className="poster-similar"
-                  style={{ backgroundImage: "url(" + poster + ")" }}
-                >
-                  <img src="" alt="" />
-                </figure>
-                <div className="content">
-                  <h5 className="titrecard"> {title} </h5>
-                  <time> Date de sortie : {Date.DateForm(release_date)}</time>
+          <div className="content-similar-movie">
+            {similar &&
+              similar.map(({ title, poster, release_date, index }) => (
+                <div className="cardmovie">
+                  <figure
+                    id="figure"
+                    className="poster-similar figure-movie"
+                    style={{ backgroundImage: "url(" + poster + ")" }}
+                  ></figure>
+                  <div className="content">
+                    <h5 className="titrecard"> {title} </h5>
+                    <time> Date de sortie : {Date.DateForm(release_date)}</time>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+          </div>
         </section>
       </div>
 
