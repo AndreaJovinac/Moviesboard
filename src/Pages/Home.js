@@ -50,18 +50,19 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section classNamem="">
+      <section className="body-card">
         <div className="content-section-2">
           <div className="text-content">
             <h1> Bibliothèque de vos films</h1>
             <p>Vous avez actuellement : ... films dans votre bibliothèque</p>
           </div>
-
-          {film &&
-            film.map((film, id) => (
-              <CardMovie film={film} key={film.id} id={film.id} />
-              /* Pour pouvoir sélectionner tous les films il faut faire un map et récuréer */
-            ))}
+          <div className="card-content">
+            {film &&
+              film.map((film, id) => (
+                <CardMovie film={film} key={film.id} id={film.id} />
+                /* Pour pouvoir sélectionner tous les films il faut faire un map et récuréer */
+              ))}
+          </div>
         </div>
       </section>
       <Footer />

@@ -73,7 +73,7 @@
   .header {
     flex-direction: column;
     width: 100%;
-    height: 140px;
+    height: 130px;
   }
 
   .content-header {
@@ -90,6 +90,7 @@
   .new {
     margin-top: 6px;
     margin-left: 15px;
+    margin-right: 15px;
   }
 
   .search {
