@@ -5,6 +5,7 @@ import axios from "axios";
 import "../Styles/New.css";
 import { Link } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
+import ReactChipInput from "react-chip-input";
 
 const New = () => {
   // Methode qui va récupérer les donnees dans les inputs du formulaire
@@ -49,11 +50,20 @@ const New = () => {
               />
               <label for="">Date de sortie</label>
               <input type="date" />
+              <label onSubmit={(e) => handleSubmit(e)} for="categorie">
+                Catégories
+              </label>
               <button id="submit-add" className="largebtn" type="submit">
                 + Ajouter le film
               </button>
               <hr />
-              <h3> Plus de saisies</h3>
+              <input
+                type="text"
+                name="titre"
+                placeholder="Ajouter vos catégories"
+                required
+              />
+
               <label for="">Description</label>
               <textarea type="text" />
             </form>
