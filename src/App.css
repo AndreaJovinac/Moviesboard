@@ -77,3 +77,33 @@ time {
   background-color: #bf0912;
   /* margin: 10px 6px 10px 6px; */
 }
+
+.medium-cancel-btn {
+  height: 20px;
+  font-size: 12px;
+  border-radius: 30px;
+  color: white;
+  font-size: 14px;
+  padding-bottom: 22px;
+
+  background-color: #9d9d9d;
+  font-weight: 600;
+  display: inline-block;
+  border: 0;
+  /* margin: 10px 6px 10px 6px; */
+}
+
+.medium-cancel-btn:hover {
+  height: 20px;
+  font-size: 12px;
+  border-radius: 30px;
+  color: white;
+  font-size: 14px;
+  padding-bottom: 22px;
+
+  background-color: #9d9d9da1;
+  font-weight: 600;
+  display: inline-block;
+  border: 0;
+  /* margin: 10px 6px 10px 6px; */
+}

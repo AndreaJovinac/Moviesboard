@@ -33,7 +33,7 @@ const CardMovie = (prosp) => {
         <p id="categories">
           {film.film.categories && film.film.categories.join(", ")}
         </p>
-        <p id=""> {film.film.description} </p>
+        <p id=""> {film.film.description.substring(0, 80).concat("... ")} </p>
         <button id="edit-btn" className="mediumbtn">
           {" "}
           <IoMdCreate /> Modifier

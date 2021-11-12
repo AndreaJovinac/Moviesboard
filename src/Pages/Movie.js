@@ -3,6 +3,7 @@ import axios from "axios";
 import Header from "../Composants/Header";
 import Footer from "../Composants/Footer";
 import CardMovie from "../Composants/CardMovie";
+import Modal from "../Composants/Modal";
 import "../Styles/Movie.css";
 import { useParams } from "react-router";
 import Date from "../Services/Date";
@@ -29,6 +30,7 @@ const Movie = () => {
   console.log(similar);
   return (
     <div className="movie">
+      <Modal />
       <Header />
       <div className="content-movie">
         <section className="nav-buttn">
@@ -98,6 +100,7 @@ const Movie = () => {
             ))}
         </section>
       </div>
+
       <Footer />
     </div>
   );
