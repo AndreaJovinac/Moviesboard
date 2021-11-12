@@ -111,3 +111,9 @@ hr {
   border: 0;
   /* margin: 10px 6px 10px 6px; */
 }
+
+input {
+  border-radius: 30px;
+  border: 1px solid #f0f0f0;
+  padding: 6px;
+}
