@@ -44,6 +44,10 @@ time {
   color: #797979;
 }
 
+hr {
+  border: 1px solid #f0f0f0;
+}
+
 .largebtn {
   background-color: #e50914;
   border-radius: 30px;

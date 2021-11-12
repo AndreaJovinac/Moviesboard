@@ -30,7 +30,7 @@
 
 .content-section-2 {
   width: 1200px;
-  padding: 20px 0px 20px 0px;
+  padding: 0px 0px 20px 0px;
   margin: auto;
 }
 
@@ -113,14 +113,22 @@ select {
   .form-hom {
     display: block;
   }
+  select {
+    padding: 10px;
+  }
   #catagorie {
     width: 100%;
   }
   .form-hom > input {
-    width: 100%;
+    width: 97%;
+    margin-top: 10px;
+    padding: 6px;
   }
   .form-hom {
-    height: 100px;
+    height: 100%;
     background-color: transparent;
+  }
+  #search {
+    margin-top: 20px;
   }
 }

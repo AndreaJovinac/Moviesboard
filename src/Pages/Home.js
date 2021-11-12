@@ -42,9 +42,8 @@ const Home = () => {
                 min="2021-11-01"
                 max="2021-11-01"
               />
-              <button className="largebtn" type="submit">
-                {" "}
-                Rechercher{" "}
+              <button className="largebtn" id="search" type="submit">
+                Rechercher
               </button>
             </form>
           </div>

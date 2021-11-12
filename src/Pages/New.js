@@ -50,9 +50,9 @@ const New = () => {
               <label for="">Date de sortie</label>
               <input type="date" />
               <button id="submit-add" className="largebtn" type="submit">
-                {" "}
                 + Ajouter le film
               </button>
+              <hr />
               <h3> Plus de saisies</h3>
               <label for="">Description</label>
               <textarea type="text" />
