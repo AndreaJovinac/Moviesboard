@@ -6,6 +6,7 @@ import "../Styles/Home.css";
 import { useParams } from "react-router";
 import CardMovie from "../Composants/CardMovie";
 import Modal from "../Composants/Modal";
+import ButtonDelete from "../Composants/ButtonDelete";
 
 const Home = () => {
   const [film, setFilm] = useState([]);
@@ -24,10 +25,10 @@ const Home = () => {
   console.log(film.length);
   return (
     <div className="home">
+      <Header />
       {modalIsOpen && (
         <Modal setModalIsOpen={setModalIsOpen} key={film.id} id={film.id} />
       )}
-      <Header />
       <section className="section">
         <div className="overlay">
           <div className="content-section">
@@ -68,12 +69,18 @@ const Home = () => {
           <div className="card-content">
             {film &&
               film.map((film, id) => (
-                <CardMovie film={film} key={film.id} id={film.id} />
+                <CardMovie
+                  setModalIsOpen={setModalIsOpen}
+                  film={film}
+                  key={film.id}
+                  id={film.id}
+                />
                 /* Pour pouvoir sélectionner tous les films il faut faire un map et récuréer */
               ))}
           </div>
         </div>
       </section>
+
       <Footer />
     </div>
   );

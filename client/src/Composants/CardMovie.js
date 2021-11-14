@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, ReactFragment } from "react";
 import "../Composants/StyleComposants/CardMovie.css";
 import { Link } from "react-router-dom";
 import Date from "../Services/Date";
 import { IoIosTrash, IoMdCreate } from "react-icons/io";
 import Modal from "../Composants/Modal";
 import axios from "axios";
+import ButtonDelete from "./ButtonDelete";
 
 const CardMovie = (prosp) => {
   //* Tu récupéres les donnés du parent */
@@ -51,7 +52,7 @@ const CardMovie = (prosp) => {
             <IoMdCreate /> Modifier
           </button>
         </Link>
-        <button onClick={() => setModalIsOpen(false)} className="mediumbtn">
+        <button onClick={() => setModalIsOpen(true)} className="mediumbtn">
           <IoIosTrash />
           Supprimer
         </button>
