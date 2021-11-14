@@ -5,9 +5,11 @@ import axios from "axios";
 import "../Styles/Home.css";
 import { useParams } from "react-router";
 import CardMovie from "../Composants/CardMovie";
+import Modal from "../Composants/Modal";
 
 const Home = () => {
   const [film, setFilm] = useState([]);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
   // const numberFilm = array.film[0].length();
   const id = film.id;
   const numberFilm = film.length;
@@ -22,6 +24,9 @@ const Home = () => {
   console.log(film.length);
   return (
     <div className="home">
+      {modalIsOpen && (
+        <Modal setModalIsOpen={setModalIsOpen} key={film.id} id={film.id} />
+      )}
       <Header />
       <section className="section">
         <div className="overlay">

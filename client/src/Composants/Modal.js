@@ -3,12 +3,17 @@ import axios from "axios";
 import { useState } from "react";
 import ButtonDelete from "../Composants/ButtonDelete";
 import "../Composants/StyleComposants/Modal.css";
+import { Link } from "react-router-dom";
 
 function Modal({ setModalIsOpen, id, film }) {
-  console.log(id);
+  // console.log(id);
+  const DisplayNone = () => {
+    setModalIsOpen(true);
+    DeleteMovie();
+  };
   const DeleteMovie = () => {
     axios.delete(`http://localhost:3000/movies/${id}`);
-    window.location.reload();
+    // window.location.reload();
   };
   return (
     <section className="modal-section">
@@ -21,9 +26,15 @@ function Modal({ setModalIsOpen, id, film }) {
         >
           Annuler
         </button>
-        <button onClick={DeleteMovie()} id="suppr-button" className="mediumbtn">
-          Supprimer
-        </button>
+        <Link exact to="/">
+          <button
+            onClick={DisplayNone()}
+            id="suppr-button"
+            className="mediumbtn"
+          >
+            Supprimer
+          </button>
+        </Link>
       </div>
     </section>
   );
