@@ -60,7 +60,12 @@ const Edit = () => {
                 required
               />
               <label for="">Synopsis</label>
-              <textarea className="input-form" type="text" rows="8" />
+              <textarea
+                className="input-form"
+                id="textarea"
+                type="text"
+                rows="8"
+              />
               <label for="url">Lien la couverture du film</label>
               <input
                 className="input-form"

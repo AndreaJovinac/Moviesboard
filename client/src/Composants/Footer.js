@@ -6,7 +6,7 @@ function Footer() {
   return (
     <div className="footer">
       <div className="content-footer">
-        <p> © Copyright - Jovinac Andréa</p>
+        <p> © Copyright - Jovinac Andréa - École Multimédia</p>
       </div>
     </div>
   );
