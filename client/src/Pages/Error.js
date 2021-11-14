@@ -17,12 +17,13 @@ const Error = () => {
             <p>
               {" "}
               Oups, vous êtes égarés.
-              <Link exact to="/">
-                <button className="mediumbtn">
-                  {" "}
-                  Revenir s la page d'accueil
-                </button>
-              </Link>
+              <div className="retourne-app">
+                <Link exact to="/">
+                  <button className="mediumbtn">
+                    Revenir s la page d'accueil
+                  </button>
+                </Link>
+              </div>
             </p>
           </div>
         </div>
