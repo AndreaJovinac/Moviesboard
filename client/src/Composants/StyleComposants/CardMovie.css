@@ -1,0 +1,31 @@
+.cardmovie {
+  border: 1px solid #f0f0f0;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 3px 3px 15px #f2f3f7;
+}
+#edit-btn {
+  margin-right: 10px;
+}
+figure {
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+}
+
+.content {
+  padding: 12px;
+  padding-bottom: 20px;
+}
+.content p {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#categories {
+  padding: 4px;
+  color: #e50914;
+  font-weight: 500;
+}
