@@ -20,9 +20,9 @@ const Home = () => {
       .get("http://localhost:3000/movies") // On mets l'URL du serveur
       .then((response) => setFilm(response.data)); // Tu me récupères la reponse dans lequel il y a toutes les données
   }, []);
-  console.log(film[0]); // On teste voir si il y a tous les films concernés
-  console.log(id);
-  console.log(film.length);
+  // console.log(film[0]); // On teste voir si il y a tous les films concernés
+  // console.log(id);
+  // console.log(film.length);
   return (
     <div className="home">
       <Header />
